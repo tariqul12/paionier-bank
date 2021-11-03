@@ -30,13 +30,13 @@
         <div class="col-md-4">
          <div class="withdraw">
           <h5>Withdraw</h5>
-          <h2>$00</h2>
+          <h2>$ <span id="currentAmount">00</span> </h2>
          </div>
         </div>
         <div class="col-md-4">
           <div class="balance">
             <h5>Balance</h5>
-            <h2>$1240</h2>
+            <h2>$ <span id="currentBalance">1240</span> </h2>
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@
         <div class="col-md-6">
           <div class="submit-area">
             <h5>Withdraw</h5>
-            <input type="text" class="form-control" placeholder="$ amount you want to withdraw">
+            <input id="withdrawAmount" type="text" class="form-control" placeholder="$ amount you want to withdraw">
             <button id="withdraw" class="btn btn-success">Withdraw</button>
           </div>
         </div>
@@ -80,11 +80,25 @@
           const totalDeposit=depositNumber+currentDepositNumber;
           
           document.getElementById('current-amount').innerText=totalDeposit;
+          const currentBalance=document.getElementById('currentBalance').innerText;
+          const currentBalanceNumber=parseFloat(currentBalance);
+          const totalbalance=currentBalanceNumber+depositNumber;
+          document.getElementById('currentBalance').innerText=totalbalance;
+
           document.getElementById('depositAmount').value="";
         })
                // withdraw button event handler
         const withdrawBtn=document.getElementById('withdraw');
         withdrawBtn.addEventListener('click',function(){
+         const withdrawAmoun=document.getElementById('withdrawAmount').value;
+         const withdrawamountNumber=parseFloat(withdrawAmoun);
+         const currentAmount=document.getElementById('currentAmount').innerText;
+         const currentAmountNumber=parseFloat(currentAmount);
+         const totalwithdrow=currentAmountNumber+withdrawamountNumber;
+         document.getElementById('currentAmount').innerText=totalwithdrow;
+         document.getElementById('withdrawAmount').value="";
+         
+
          
 
           
