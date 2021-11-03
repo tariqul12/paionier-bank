@@ -1,0 +1,48 @@
+body{
+    padding: 100px;}
+
+form{
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 4px 4px 20px;
+}
+.btn{
+    margin-top: 4px;
+}
+.form-control{
+    margin-bottom: 20px;
+}
+.submit-area{
+    margin-top: 30px;
+    border: 1px solid gainsboro;
+    box-shadow: 5px 5px 10px gray;
+    padding: 20px;
+    border-radius: 10px;
+}
+#transaction-area{
+    display: none;
+
+}
+.deposit{
+    margin: 0 20px;
+    background-color: slateblue;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+    
+}
+.withdraw{
+    margin: 0 20px;
+    background-color: lightsalmon;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+}
+.balance{
+    margin: 0 20px;
+    background-color: orange;
+    padding: 20px;
+    border-radius: 20px;
+    color: white;
+}
